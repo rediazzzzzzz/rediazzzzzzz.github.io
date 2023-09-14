@@ -36,7 +36,7 @@ class Spider(object):
 
     def run(self):
         # 翻页采集10页 一页30条
-        for page in range(10, 11):
+        for page in range(1, 11):
             print(f'正在采集第{page}页的数据————')
             # 提取每一页的URL
             url = self.url_1.format(page)
@@ -48,7 +48,7 @@ class Spider(object):
             else:
                 continue
 
-            break
+            #break
 
     def return_response(self, url):
         # 延时请求(反爬)
