@@ -1,0 +1,29 @@
+<!--pages/select/select.wxml-->
+
+<view class = "coat">
+  <!-- 背景图-内容覆盖 -->
+  <image style="opacity:0.9" class= "background" src= "../../images/rest.png" mode= "aspectFill" />
+  <!-- 按钮组件 -->
+  <view class= "btn">
+    <!-- 本地对战 -->
+    <button style="width:260rpx;height:110rpx;font-size:34rpx;font-weight:bold;color:white;opacity:0.9;background-color:#33CCCC" hover-class="hover" bindtap="local" >
+        <!-- 图标 -->
+        <image class= "icon1" src= '../../icons/本地2.png' />
+        <text class= "text">本地对战</text>
+    </button>
+    <!-- 人机对战 -->
+    <button style="width:260rpx;height:110rpx;font-size:34rpx;font-weight:bold;color:white;opacity:0.9;background-color:#33CCCC" hover-class="hover" bindtap="ai" >
+        <!-- 图标 -->
+        <image class= "icon2" src= '../../icons/机器人2.png' />
+        <text class= "text">人机对战</text>
+    </button>
+    <!-- 在线对战 -->
+    <button style="width:260rpx;height:110rpx;font-size:34rpx;font-weight:bold;color:white;opacity:0.9;background-color:#33CCCC" hover-class="hover" bindtap="online" >
+        <!-- 图标 -->
+        <image class= "icon3" src= '../../icons/网络3.png' />
+        <text class= "text">在线对战</text>
+    </button>
+  </view>
+</view>
+
+

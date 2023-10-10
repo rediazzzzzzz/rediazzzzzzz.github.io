@@ -1,0 +1,12 @@
+<!--congradulations.wxml-->
+<view class = "coat">
+    <!-- 背景图-内容覆盖 -->
+    <image style="opacity:0.76" class= "background" src= "../../images/hamburg.jpg" mode= "aspectFill" />
+    <!-- 祝贺胜利 -->
+    <view class="win">
+        <text class="explain">Congratulations to {{name}} for winning!\nwelcome again</text>
+        <button hover-class="welcome" bindtap="back" style="width:260rpx;height:90rpx;font-size:34rpx;font-weight:bold;color:white;top:10rpx;border: 1px solid white;">
+            again
+        </button>
+    </view>
+</view>

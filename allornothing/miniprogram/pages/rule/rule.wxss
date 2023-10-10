@@ -1,0 +1,28 @@
+/* pages/rule/rule.wxss */
+/* pages/select/select.wxss */
+page {
+  height: 100%;
+}
+
+.coat {
+  position: relative;
+  background-color: #cfcfc4;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.background {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+}
+ .text {
+    position:absolute;
+    top: 70rpx;
+    margin:30rpx;
+    color: #003366;
+    font-size: 38rpx;
+    font-weight: bold;
+ }

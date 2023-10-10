@@ -1,0 +1,31 @@
+<!--pages/ranking/ranking.wxml-->
+
+<view class = "coat">
+  <!-- 背景图-内容覆盖 -->
+  <image style="opacity:0.8" class= "background" src= "../../images/moonlight.jpg" mode= "bottom center" />
+  <!-- 排行榜 -->
+  <view class="ranking">
+    <view class="partition">
+        <text class="text">1.tuk\n</text>
+    </view>
+    <view class="partition">
+        <text class="text">2.tuk\n</text>
+    </view>
+    <view class="partition">
+        <text class="text">3.tuk\n</text>
+    </view>
+    <view class="partition">
+        <text class="text">4.tuk\n</text>
+    </view>
+    <view class="partition">
+        <text class="text">5.tuk\n</text>
+    </view>
+    <view class="partition">
+        <text class="text">6.tuk\n</text>
+    </view>
+    <view class="partition">
+        <text class="text">7.tuk\n</text>
+    </view>
+  </view>
+</view>
+

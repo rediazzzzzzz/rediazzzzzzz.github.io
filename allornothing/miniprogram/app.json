@@ -1,0 +1,24 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/ready/ready",
+    "pages/rule/rule",
+    "pages/ranking/ranking",
+    "pages/select/select",
+    "pages/local/local",
+    "pages/ai/ai",
+    "pages/online/online",
+    "pages/congradulations/congradulations"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#006666",
+    "navigationBarTitleText": "all or nothing",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#CCCCCC",
+    "enablePullDownRefresh": true
+  },
+  
+  "sitemapLocation": "sitemap.json"
+}

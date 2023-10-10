@@ -1,0 +1,34 @@
+<!--index.wxml-->
+
+<view class = "coat">
+  <!-- 背景图-内容覆盖 -->
+  <image style="opacity:0.9" class= "background" src= "../../images/rest.png" mode= "aspectFill" />
+  <!-- 按钮组件 -->
+  <view class= "btn">
+    <!-- 登录/注册 -->
+    <button style="width:260rpx;height:110rpx;font-size:34rpx;font-weight:bold;color:white;opacity:0.85;background-color:#336699" hover-class="hover" bindtap="enroll" >
+        <!-- 图标 -->
+        <image class= "icons" src= '../../icons/224用户.png' />
+        <text class= "text">登录/注册</text>
+    </button>
+    <!-- 准备游戏 -->
+    <button style="width:260rpx;height:110rpx;font-size:34rpx;font-weight:bold;color:white;opacity:0.85;background-color:#336699" hover-class="hover" bindtap="ready" >
+        <!-- 图标 -->
+        <image class= "icons" src= '../../icons/开始.png' />
+        <text class= "text">开始游戏</text>
+    </button>
+    <!-- 规则介绍 -->
+    <button style="width:260rpx;height:110rpx;font-size:34rpx;font-weight:bold;color:white;opacity:0.85;background-color:#336699" hover-class="hover" bindtap="rule" >
+        <!-- 图标 -->
+        <image class= "icons" src= '../../icons/介绍.png' />
+        <text class= "text">规则介绍</text>
+    </button>
+    <!-- 排行榜 -->
+    <button style="width:260rpx;height:110rpx;font-size:34rpx;font-weight:bold;color:white;opacity:0.85;background-color:#336699" hover-class="hover" bindtap="ranking" >
+        <!-- 图标 -->
+        <image class= "icons" src= '../../icons/奖杯2.png' />
+        <text class= "text">排行榜</text>
+    </button>
+  </view>
+</view>
+

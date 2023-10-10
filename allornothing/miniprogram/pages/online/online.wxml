@@ -1,0 +1,11 @@
+<!--pages/online/online.wxml-->
+<view class = "coat">
+    <!-- 背景图-内容覆盖 -->
+  <image style="opacity:0.9" class= "background" src= "../../images/pineapplehouse.jpg" mode= "aspectFill" />
+  <view class="load">
+    <text class="find">正在匹配玩家···</text>
+    <button class="tap" bindtap="cancel" style="width:260rpx;height:90rpx;font-size:34rpx;font-weight:bold;color:white;top:10rpx;border: 1px solid white;">
+            取消
+    </button>
+  </view>>
+</view>

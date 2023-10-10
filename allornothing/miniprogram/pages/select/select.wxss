@@ -1,0 +1,87 @@
+/* pages/select/select.wxss */
+
+page {
+  height: 100%;
+}
+
+.coat {
+  position: relative;
+  background-color: #cfcfc4;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.background {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  position:absolute;
+  left: 150rpx;
+  top: 150rpx;
+}
+
+/*font-szie: 1rpx;background-color: #4CAF50;wxss中设置button尺寸、颜色等等不起作用*/
+button {
+  margin: 120rpx;
+}
+
+.icon1 {
+  position:absolute;
+  top: 20rpx;
+  left:20rpx;
+  width:70rpx;
+  height:70rpx;
+}
+
+.icon2 {
+  position:absolute;
+  top: 28rpx;
+  left:24rpx;
+  width:50rpx;
+  height:50rpx;
+}
+
+.icon3 {
+  position:absolute;
+  top: 30rpx;
+  left:20rpx;
+  width:60rpx;
+  height:60rpx;
+}
+
+.text {
+  position:absolute;
+  top:16rpx;
+  left:90rpx;
+}
+
+/*将hover放在wxss最后依然不生效，未找到原因，通过!important强行提高优先级*/
+.hover {
+  background-color: #003366 !important;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+

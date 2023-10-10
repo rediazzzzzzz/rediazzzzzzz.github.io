@@ -1,0 +1,21 @@
+<!--index.wxml-->
+
+<view class = "coat">
+    <!-- 背景图-内容覆盖 -->
+    <image style="opacity:0.8" class= "background" src= "../../images/house.jpg" mode= "aspectFill" />
+    <image class="icon" src="../../images/OctopusAndFriends.png" mode="aspectFit"/>
+    <!-- 表单-记录局数和初始筹码 -->
+    <form bindsubmit="toSelect" class="form">
+        <view class="form-item">
+            <text class="tip">总局数</text>
+            <input type="text" name="count" placeholder="请输入希望进行的总局数" />
+        </view>
+        <view class="form-item">
+            <text class="tip">筹码</text>
+            <!-- 在微信小程序开发中，input标签的name属性是用于标识表单元素的。当用户提交表单时，小程序后端会通过该name属性的值来获取相应的数据。因此，在编写表单时，需要为每个输入元素设置一个唯一的name属性值。 -->
+            <input type="number" name="money" placeholder="请输入希望的初始筹码" />
+        </view>
+    <button form-type="submit" class="btn">提交</button>
+    </form>
+</view>
+
