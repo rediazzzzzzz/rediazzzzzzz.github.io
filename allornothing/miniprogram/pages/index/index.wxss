@@ -45,8 +45,27 @@ button {
 }
 
 /*将hover放在wxss最后依然不生效，未找到原因，通过!important强行提高优先级*/
+/*原因是button默认style属性优先级最高，覆盖了hover*/
 .hover {
   background-color: #003366 !important;
+}
+
+.KK {
+  position:absolute;
+  background-color:rgb(0,0,128,0.6);
+  padding:14rpx;
+  box-sizing:border-box;
+  top:00rpx;
+  width:100%;
+  height:100rpx;
+  text-align:center;
+  
+}
+
+.kkk {
+  color:white;
+  font-size:50rpx;
+  font-weight:bold;
 }
 
 .userinfo {
