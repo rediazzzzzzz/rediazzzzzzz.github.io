@@ -1,0 +1,31 @@
+<!-- community.wxml -->
+<view class="coat">
+    <!-- 导航区 -->
+    <view class="back">
+        <scroll-view class="navig" scroll-x>
+        <!-- 推荐 -->
+            <view bindtap="activeNav" data-index="{{0}}" class="nav_item {{0===currentIndexNav?'active':''}}">推荐</view>
+        <!-- 搜索 -->
+            <view bindtap="activeNav" data-index="{{1}}" class="nav_item {{1===currentIndexNav?'active':''}}">搜索</view>
+    </scroll-view>
+    </view>
+    <!-- 浏览区 -->
+           
+    <!-- 底部导航区 -->
+    <view class="bottom_nav">
+        <!-- 首页 -->
+        <view class="bt_item">
+            <image class="icon" src="../../icons/首页.png" /> 
+            <text >首页</text>
+        </view>
+        <!-- 发帖 -->
+        <view class="bt_item_up">
+            <image class="icon_up" src="../../icons/加号.png" /> 
+        </view>
+        <!-- 我的 -->
+        <view class="bt_item">
+            <image class="icon" src="../../icons/我的.png" /> 
+            <text >我的</text>
+        </view>
+    </view>
+</view>
