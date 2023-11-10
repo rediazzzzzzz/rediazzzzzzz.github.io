@@ -1,10 +1,16 @@
 {
   "pages": [
+    "pages/home/home",
+    "pages/search/search",
+    "pages/recommend/recommend",
+    "pages/upload/upload",
+    
     "pages/community/community",
-    "pages/comm/comm",
-    "pages/index/index"
+    "pages/my/my",
+    "pages/index/index",
     
     
+    "pages/detail/detail"
     
   ],
   "window": {

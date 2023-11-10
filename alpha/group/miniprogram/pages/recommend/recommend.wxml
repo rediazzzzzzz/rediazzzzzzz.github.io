@@ -1,4 +1,5 @@
-<!-- community.wxml -->
+<!--pages/recommend/recommend.wxml-->
+
 <view class="coat">
     <!-- 导航区 -->
     <view class="back">

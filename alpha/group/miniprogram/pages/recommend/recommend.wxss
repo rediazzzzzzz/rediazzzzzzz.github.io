@@ -1,4 +1,5 @@
-/* pages/community/community.wxss */
+/* pages/recommend/recommend.wxss */
+
 page {
   height: 100%;
 }
