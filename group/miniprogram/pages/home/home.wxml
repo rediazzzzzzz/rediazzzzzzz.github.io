@@ -1,0 +1,44 @@
+<!--pages/home/home.wxml-->
+
+<view class="coat">
+    <!-- 抬头 -->
+    <view class="back"></view>
+    <!-- 用户信息 -->
+    <view class="user">
+        <view class="head"></view>
+        <view class="name">昵称：tuk</view>
+        <view class="credit">信誉积分：{{800}}</view>
+    </view>
+    <!-- 物品信息 -->
+    <view class="obj">
+        <text class="tip">————宝贝：超值有趣————</text>
+        <scroll-view class="mess" scroll-y="{{true}}">
+            <view class="sin">
+                <view class="sin_obj"></view>
+                <text class="sin_text">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</text>
+            </view>
+            <view class="sin">
+                <view class="sin_obj"></view>
+                <text class="sin_text">2鹅鹅鹅鹅鹅鹅饿鹅鹅鹅饿鹅鹅鹅饿呃呃呃</text>
+            </view>
+            <view class="sin">
+                <view class="sin_obj"></view>
+                <text class="sin_text">3</text>
+            </view>
+            <view class="sin">
+                <view class="sin_obj"></view>
+                <text class="sin_text">4</text>
+            </view>
+            <view class="sin">
+                <view class="sin_obj"></view>
+                <text class="sin_text">5</text>
+            </view>
+            <view class="sin">
+                <view class="sin_obj"></view>
+                <text class="sin_text">6</text>
+            </view>
+        </scroll-view>
+        
+    </view>
+    
+</view>
