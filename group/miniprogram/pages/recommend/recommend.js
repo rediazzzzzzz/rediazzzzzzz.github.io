@@ -11,8 +11,144 @@ Page({
     //底部导航索引
     bt_index:0,
     //浏览区帖子信息
-    scan_list:[],
+    post_list:[
+      {
+        user:{
+          head:"/images/tuk.jpg",
+          myname:"tuk",
+          mycredit:1000,
+          my_obj:[
+            {
+              intro:"111",
+              image:"/images/tuk.jpg",
+            },
+            {
+              intro:"333",
+              image:"/images/跑腿闪送插画.png",
+            }
+          ]
+        },
+        post:{
+          time:"17:25",
+          title:"大四二手出售：这次体验超棒",
+          content:"这次从学姐手里买的便利贴，简直开阔了我的眼界",
+          img:[
+            "/images/gou.jpg",
+            "/images/zhu.jpg",
+            "/images/gou.jpg",
+          ],
+          tag:["12345","tuk","鹅鹅鹅","1111111111","abcdefg"],
+          cmt:[
+            {
+              head:"/images/松鼠.jpg",
+              name:"吗喽",
+              content:"点赞",
+              time:"2023/11/14 13:24",
+            }
+          ],
+        }
+      },
+
+      {
+        user:{
+          head:"/images/糖果.jpg",
+          myname:"糖果",
+          mycredit:233,
+          my_obj:[
+            {
+              intro:"糖糖堂",
+              image:"/images/糖果.jpg",
+            },
+            {
+              intro:"出眼镜",
+              image:"/images/眼镜.jpg",
+            },
+            {
+              intro:"出吗喽",
+              image:"/images/全暇.jpg",
+            },
+            {
+              intro:"全暇不出",
+              image:"/images/全暇.jpg",
+            },
+          ]
+        },
+        post:{
+          time:"17:27",
+          title:"大四二手出售：这次体验超棒",
+          content:"这次从学姐手里买的糖果，简直开阔了我的眼界",
+          img:[
+            "/images/zhu.jpg",
+          ],
+          tag:["22222222","tuk","鹅鹅鹅","1111111111"],
+          cmt:[
+            {
+              head:"/images/tuk.jpg",
+              name:"tuk",
+              content:"不给糖就捣蛋",
+              time:"2023/11/14 13:44",
+            },
+            {
+              head:"/images/橘子.jpg",
+              name:"橘",
+              content:"不给橘子就捣蛋",
+              time:"2023/11/14 13:45",
+            }
+
+          ],
+        }
+      },
+
+      {
+        user:{
+          head:"/images/帽子.jpg",
+          myname:"帽子",
+          mycredit:417,
+          my_obj:[
+            {
+              intro:"送帽子",
+              image:"/images/帽子.jpg",
+            },
+          ]
+        },
+        post:{
+          time:"17:28",
+          title:"大四二手出售：这次体验超棒",
+          content:"这次从学姐手里买的帽子，简直开阔了我的眼界",
+          img:[
+            "/images/dog.jpg",
+          ],
+          tag:[],
+          cmt:[],
+        }
+      },
+
+      {
+        user:{
+          head:"/images/橘子.jpg",
+          myname:"TUK",
+          mycredit:417,
+          my_obj:[
+            {
+              intro:"卖橘子",
+              image:"/images/橘子.jpg",
+            },
+          ]
+        },
+        post:{
+          time:"17:29",
+          title:"大四二手出售：这次体验超棒",
+          content:"这次从学姐手里买的橘子，简直开阔了我的眼界",
+          tag:["4","tuk","鹅鹅鹅","1111111111"],
+          cmt:[],
+        }
+      },
+      
+    ],
     //
+    my_user:{},
+    
+    
     Z_img:["../../icons/赞.png"],
   },
 
@@ -26,30 +162,40 @@ Page({
       currentIndexNav:e.target.dataset.index
     })
     console.log(e.target.dataset.index)
-    if(this.data.currentIndexNav==1)
+    if(this.data.currentIndexNav==1)        //搜索
     wx.redirectTo({
       url: '/pages/search/search',
+    })
+    else if(this.data.currentIndexNav==2)   //我的帖子
+    wx.redirectTo({
+      url: '/pages/my_card/my_card',
     })
   },
 
 
 //分区2-浏览区
 
-  //进入个人主页
-  click_home()
+  //进入发帖人个人主页
+  click_home(e)
   {
-    console.log("点击个人主页")
+    var U=e.currentTarget.dataset.user
+    console.log("点击发帖人个人主页")
+    console.log(U)
     wx.navigateTo({
-      url:'/pages/home/home'
+      url:'/pages/home/home?user='+ JSON.stringify(U),
     })
   },
 
   //进入帖子详情
-  click_detail()
+  click_detail(e)
   {
+    console.log(e)
+    var I=e.currentTarget.dataset.item
     console.log("点击帖子详情")
+    console.log("传递数据：\n")
+    console.log(I)
     wx.navigateTo({
-      url:'/pages/detail/detail'
+      url:'/pages/detail/detail?user='+JSON.stringify(I.user)+'&post='+JSON.stringify(I.post),
     })
   },
 
@@ -112,11 +258,11 @@ Page({
         if(res.statusCode == 200) {
           console.log(res)//请求成功后的res
           this.setData({
-            scan_list:res.data.scan_list
+            post_list:res.data.scan_list
           })
         } 
         else {
-          console.error('保存到后端失败:', res);
+          console.error('请求失败:', res);
         }
       }
     })
@@ -125,5 +271,15 @@ Page({
   onLoad:function(options){
     //获取帖子数据
     this.get_scan_list();
+    const app = getApp();
+    //console.log(app.globalData.my_user.user)
+    this.setData({
+      my_user:app.globalData.my_user
+    })
+
+    console.log("get post list:\n")
+    console.log(this.data.post_list)
+    console.log("get my user:\n")
+    console.log(this.data.my_user)
   },
 })

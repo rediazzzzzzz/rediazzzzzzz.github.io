@@ -7,25 +7,19 @@
     </view>
     <!-- 用户信息 -->
     <view class="user">
-        <view class="head"></view>
-        <view class="name">昵称</view>
-        <view class="time">2023年11月8日 15：26</view>
+        <image class="head" src="{{my_user.head}}" />
+        <view class="name">{{my_user.myname}}</view>
+        <view class="time">{{my_post.time}}</view>
     </view>
     <!-- 帖子详情 -->
     <scroll-view class="detail" scroll-y="{{true}}">
-        <view class="Dtitle">站立会议</view>
-        <view class="Dcontent">站立会议（stand up meeting） 是每天的一个标志性活动，将团队召集起来，并让每个人了解当前项目进展状况的一种会议。该活动起源于敏捷开发方法，在Scrum开发中很常见。日常站立会议一般用时五到十五分钟，有时候指代站立的早晨点名或每日例会</view>
-        <view >
-            <image class="Dimg" src="../../images/跑腿闪送插画.png" mode="aspectFit" />
-            <image class="Dimg" src="../../images/跑腿闪送插画.png" mode="aspectFit" />
+        <view class="Dtitle">{{my_post.title}}</view>
+        <view class="Dcontent">{{my_post.content}}</view>
+        <view wx:for="{{my_post.img}}" wx:for-item="Mitem" wx:key="*this" >
+            <image class="Dimg" src="{{Mitem}}" mode="aspectFit" />
         </view>
-        <scroll-view class="Dtag" scroll-x="{{true}}">
-            <view class="tag">#哈哈哈</view>
-            <view class="tag">#哈哈哈</view>
-            <view class="tag">#哈哈哈</view>
-            <view class="tag">#aaa</view>
-            <view class="tag">#hhh</view>
-            <view class="tag">#vvvvv</view>
+        <scroll-view class="Dtag" scroll-x="{{true}}" >
+            <view class="tag" wx:for="{{my_post.tag}}" wx:key="*this">#{{item}}</view>
         </scroll-view>
     </scroll-view>
     <view class="opera">
@@ -34,30 +28,12 @@
     </view>
     <!-- 评论区 -->
     <scroll-view class="comment" scroll-y="{{true}}">
-        <view class="C_obj">
+        <view class="C_obj" wx:for="{{my_post.cmt}}" wx:for-item="Citem" wx:key="*this" >
             <!-- 用户信息 -->
-            <view class="C_user">
-                <view class="C_head"></view>
-                <view class="C_name">昵称</view>
-                <view class="C_content">很不错值得点赞</view>
-                <view class="C_time">2023年11月8日 15：26</view>
-            </view>
-        </view>
-        <view class="C_obj">
-            <!-- 用户信息 -->
-            <view class="C_user">
-                <view class="C_head"></view>
-                <view class="C_name">昵称</view>
-                <view class="C_content">很不错值得点赞</view>
-                <view class="C_time">2023年11月8日 15：26</view>
-            </view>
-        </view>
-        <view class="C_obj">
-            <view class="C_head"></view>
-            <view class="C_name">昵称</view>
-            <view class="C_content">很不错值得点赞</view>
-            <view class="C_time">2023年11月8日 15：26</view>
-            
+            <image class="C_head" src="{{Citem.head}}" />
+            <view class="C_name">{{Citem.name}}</view>
+            <view class="C_content">{{Citem.content}}</view>
+            <view class="C_time">{{Citem.time}}</view>
         </view>
     </scroll-view>
 </view>

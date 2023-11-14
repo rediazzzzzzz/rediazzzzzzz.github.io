@@ -12,8 +12,10 @@ Page({
       bt_index:0,
       //搜索关键词
       key_word:'',
+      history:[],
+      my_user:{},
     },
-  
+    
   //分区1-首部导航
   
     //点击导航
@@ -28,16 +30,38 @@ Page({
       wx.redirectTo({
         url: '/pages/recommend/recommend',
       })
+      else if(this.data.currentIndexNav==1)
+      wx.redirectTo({
+        url: '/pages/search/search',
+      })
+      else if(this.data.currentIndexNav==2)
+      wx.redirectTo({
+        url: '/pages/my_card/my_card',
+      })
     },
   
   //分区2-搜索区
 
-  //表单数据
-  toSearch(e){
-      console.log(e.detail.value.info);
-      this.setData({
-        key_word:e.detail.value.info
-      })
+  //获取表单数据
+  go_search(e)
+  {
+    
+    if(!e.detail.value||e.detail.value.trim()==='') return;     //控制搜索字不为空或空串
+    var str = e.detail.value.trim()
+    this.data.history.push(str)
+    this.setData({
+      key_word:str,
+      history:this.data.history
+    })
+
+    console.log("new history:\n")
+    console.log(this.data.history)
+
+    const app = getApp();
+    app.globalData.my_user.search_history=this.data.history
+    //console.log(app.globalData.my_user.search_history)
+    //向后端发送搜索关键字请求：
+    
   },
   
   //分区3-底部导航
@@ -60,7 +84,7 @@ Page({
       {
         console.log("点击发帖")
         wx.navigateTo({
-          url:'pages/upload/upload',
+          url:'/pages/upload/upload',
         })
       }
       if(e.currentTarget.dataset.id==2)
@@ -74,7 +98,17 @@ Page({
   
   
     onLoad:function(options){
-
+      const app = getApp();
+      this.setData({
+        my_user:app.globalData.my_user,
+        history:app.globalData.my_user.search_history
+      })
+      
+      console.log("search receive options:\n")
+      console.log("get my user:\n")
+      console.log(this.data.my_user)
+      console.log("get history:\n")
+      console.log(this.data.history)
     },
 
 })

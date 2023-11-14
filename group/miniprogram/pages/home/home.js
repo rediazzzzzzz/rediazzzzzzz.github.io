@@ -5,62 +5,38 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    my_user:{
+      head:"/images/tuk.jpg",
+      name:"Tuk",
+      mycredit:8000,
+      my_obj:[
+        {
+          intro:"111",
+          image:"/images/跑腿闪送插画.png",
+        },
+        {
+          intro:"222",
+          image:"/images/橘子.jpg",
+        },
+        {
+          intro:"333",
+          image:"/images/跑腿闪送插画.png",
+        }
+      ]
+    },
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    console.log("home receive options:\n")
+    console.log(options)
+    var that = this;
+    that.setData({
+        my_user:JSON.parse(options.user)
+    })
+    console.log("my_user:\n")
+    console.log(that.data.my_user)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
 })

@@ -116,7 +116,9 @@ page {
     margin-top:10rpx;
     width:690rpx;
     box-sizing: border-box;
+    
     white-space:nowrap;
+    
     background:;
 }
 
@@ -129,6 +131,7 @@ page {
     border-radius: 32rpx;
     box-sizing: border-box;
     border: 2rpx solid #B2AAAA;
+    
     display:inline-block;
     background:white;
 }
@@ -168,7 +171,7 @@ page {
     padding-right:30rpx;
     width:100%;
     height:170rpx;
-    background:white;
+    background:;
     border: 2;
 }
 

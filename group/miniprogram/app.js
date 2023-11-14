@@ -14,6 +14,50 @@ App({
       });
     }
 
-    this.globalData = {};
+    this.globalData = {
+      my_user:{
+        user:{
+          head:"/images/橘子.jpg",
+          myname:"tuk",
+          mycredit:100,
+          my_obj:[
+            {
+              intro:"111",
+              image:"/images/橘子.jpg",
+            },
+            {
+              intro:"222",
+              image:"/images/帽子.jpg",
+            },
+            {
+              intro:"333",
+              image:"/images/吃.jpg",
+            }
+          ],
+        },
+        search_history:["梳子","橘子","卷子"],
+        post:[
+          {
+            time:"2023/11/14 13:58",
+            title:"大四二手出售：这次体验超棒",
+            content:"这次从学姐手里买的橘子，简直开阔了我的眼界",
+            img:[
+              "/images/橘子.jpg",
+              "/images/tuk.jpg",
+              "/images/gou.jpg",
+            ],
+            tag:["橘子","眼界"],
+            cmt:[
+              {
+                head:"/images/糖果.jpg",
+                name:"糖糖堂",
+                content:"不错不错",
+                time:"2023/11/14 15：19",
+              },
+            ],
+          },
+        ]
+      },
+    };
   }
 });
