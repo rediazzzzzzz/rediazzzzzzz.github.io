@@ -34,7 +34,7 @@
             <!-- 版块-操作 :点赞、评论;点击进行相应的操作 -->
             <view class="opera">
                 <!-- 操作-点赞:点击进行点赞 -->
-                <image bindtap="zan" data-index='0' class="zan" src="{{Z_img[0]}}" />
+                <image bindtap="zan" data-index="{{index}}" class="zan" src="{{Pitem.post.zan.img}}" />
                 <!-- 操作-评论:点击进行评论 -->
                 <image bindtap="comment" data-index='0' class="comment" src="../../icons/评论.png" />
             </view>

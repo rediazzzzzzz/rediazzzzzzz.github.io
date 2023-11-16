@@ -38,6 +38,11 @@ Page({
             "/images/gou.jpg",
           ],
           tag:["12345","tuk","鹅鹅鹅","1111111111","abcdefg"],
+          zan:{
+            num:0,
+            flag:false,
+            img:"/icons/zan0.png",
+          },
           cmt:[
             {
               head:"/images/松鼠.jpg",
@@ -81,6 +86,11 @@ Page({
             "/images/zhu.jpg",
           ],
           tag:["22222222","tuk","鹅鹅鹅","1111111111"],
+          zan:{
+            num:0,
+            flag:false,
+            img:"/icons/zan0.png",
+          },
           cmt:[
             {
               head:"/images/tuk.jpg",
@@ -119,6 +129,11 @@ Page({
             "/images/dog.jpg",
           ],
           tag:[],
+          zan:{
+            num:0,
+            flag:false,
+            img:"/icons/zan0.png",
+          },
           cmt:[],
         }
       },
@@ -140,6 +155,11 @@ Page({
           title:"大四二手出售：这次体验超棒",
           content:"这次从学姐手里买的橘子，简直开阔了我的眼界",
           tag:["4","tuk","鹅鹅鹅","1111111111"],
+          zan:{
+            num:0,
+            flag:false,
+            img:"/icons/zan0.png",
+          },
           cmt:[],
         }
       },
@@ -147,9 +167,6 @@ Page({
     ],
     //
     my_user:{},
-    
-    
-    Z_img:["../../icons/赞.png"],
   },
 
 //分区1-首部导航
@@ -202,11 +219,17 @@ Page({
   //点赞
   zan(e)
   {
-    console.log("点赞");
-    console.log(e)
+    console.log("点赞")
+    var id = e.currentTarget.dataset.index
+    var temp_img = `post_list[${id}].post.zan.img`
+    var temp_flag = `post_list[${id}].post.zan.flag`
+    var temp = this.data.post_list[e.currentTarget.dataset.index].post.zan
+    console.log(temp.flag)
     this.setData({
-      [`Z_img[${e.currentTarget.dataset.index}]`]:"../../icons/赞R.png"
+      [temp_img]:temp.flag?"/icons/zan0.png":"/icons/zan2.png",
+      [temp_flag]:!temp.flag
     })
+    //同步后端数据改变：
   },
 
   //评论
