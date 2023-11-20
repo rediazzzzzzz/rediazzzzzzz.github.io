@@ -13,14 +13,9 @@ Page({
     //我的帖子信息
     //
     my_user:{
-        user:{
-
-        },
-        post:{
-
-        }
+        user:{},
+        post:[]
     },
-    Z_img:["../../icons/赞.png"],
   },
 
 //分区1-首部导航
@@ -65,9 +60,31 @@ Page({
   {
     console.log("点赞");
     console.log(e)
+    var id = e.currentTarget.dataset.index
+    console.log(id)
+    var temp_img = `my_user.post[${id}].zan.img`
+    var temp_flag = `my_user.post[${id}].zan.flag`
+    var temp_num = `my_user.post[${id}].zan.num`
+    var temp = this.data.my_user.post[id].zan
+    console.log(temp.flag)
     this.setData({
-      [`Z_img[${e.currentTarget.dataset.index}]`]:"../../icons/赞R.png"
+      [temp_img]:temp.flag?"/icons/zan0.png":"/icons/zan2.png",
+      [temp_flag]:!temp.flag
     })
+    if(temp.flag)   //加赞
+    {
+      this.setData({
+        [temp_num]:temp.num+1
+      })
+    }
+    else            //减赞
+    {
+      this.setData({
+        [temp_num]:temp.num-1
+      })
+    }
+    console.log(temp)
+    //同步后端数据改变：
   },
 
   //评论

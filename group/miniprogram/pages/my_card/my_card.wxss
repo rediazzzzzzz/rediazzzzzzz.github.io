@@ -84,10 +84,8 @@ page {
 .content {
     position:absolute;
     top:100rpx;
-    background-color:;
     width:590rpx;
     height:200rpx;
-    background:;
 }
 
 .title {
@@ -123,17 +121,32 @@ page {
 .opera {
     position:absolute;
     top:326rpx;
-    background-color:;
     width:590rpx;
     height:60rpx;
 }
 
 .zan {
-    position:absolute;
-    left:466rpx;
+  position:absolute;
+  right: 50rpx;
+  /*width: 160rpx;*/
+  box-sizing: border-box;
+  background-color:rgb(63, 51, 167,0);
+
+}
+
+.zan_img {
+    position: relative;
+    bottom:2rpx;
+    right: 26rpx;
     width:46rpx;
     height:46rpx;
-    background-color:;
+}
+
+.zan_num {
+    position: relative;
+    right:20rpx;
+    bottom:8rpx;
+    font-size:32rpx;
 }
 	
 .comment {
@@ -141,7 +154,6 @@ page {
     left:540rpx;
     width:46rpx;
     height:46rpx;
-    background-color:;
 }
 
 /*底部导航区*/

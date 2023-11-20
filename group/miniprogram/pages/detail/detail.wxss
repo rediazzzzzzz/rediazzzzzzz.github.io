@@ -50,7 +50,6 @@ page {
     height:100rpx;
     border: 1px solid #707070;
     border-radius: 50%;
-    background:;
 }
 
 .name {
@@ -76,7 +75,6 @@ page {
     box-sizing: border-box;
     padding-left:30rpx;
     padding-right:30rpx;
-    background:;
 }
 
 .Dtitle {
@@ -100,7 +98,6 @@ page {
     margin-top:24rpx;
     font-size:36rpx;
     letter-spacing: 0em;
-    background:;
 }
 
 .Dimg {
@@ -108,7 +105,6 @@ page {
     margin-top:30rpx;
     width:690rpx;
     height:340rpx;
-    background:;
 }
 
 .Dtag {
@@ -118,8 +114,6 @@ page {
     box-sizing: border-box;
     
     white-space:nowrap;
-    
-    background:;
 }
 
 .tag {
@@ -140,14 +134,35 @@ page {
     position:fixed;
     top:1180rpx;
     width:100%;
-    background:;
 }
 
-.zc {
-    position:relative;
+.zan {
+    position: absolute;
+    right: 120rpx;
+    box-sizing: border-box;
+    background-color:rgb(63, 51, 167,0);
+}
+
+.zan_img {
+    position: relative;
+    top: 6rpx;
+    right: 18rpx;
+    width: 52rpx;
+    height: 52rpx;
+}
+
+.zan_num {
+    position: relative;
+    right: 10rpx;
+    bottom: 2rpx;
+    font-size: 34rpx;
+}
+
+.dcmt {
+    position: absolute;
     margin-top:10rpx;
-    margin-right:40rpx;
-    left:560rpx;
+    margin-right:20rpx;
+    left:650rpx;
     width:52rpx;
     height:52rpx;
     display:inline-block;
@@ -161,7 +176,6 @@ page {
     box-sizing: border-box;
     
     padding-top:10rpx;
-    background:;
 }
 
 .C_obj {
@@ -169,9 +183,8 @@ page {
     margin-top:10rpx;
     padding-left:30rpx;
     padding-right:30rpx;
-    width:100%;
+    width:670rpx;
     height:170rpx;
-    background:;
     border: 2;
 }
 
@@ -182,7 +195,6 @@ page {
     top:14rpx;
     border: 2rpx solid #707070;
     border-radius: 50%;
-    background:;
 }
 
 .C_name{

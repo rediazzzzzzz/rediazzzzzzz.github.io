@@ -149,10 +149,27 @@ page {
 }
 
 .zan {
-    position:absolute;
-    left:466rpx;
+  position:absolute;
+  right: 50rpx;
+  /*width: 160rpx;*/
+  box-sizing: border-box;
+  background-color:rgb(63, 51, 167,0);
+
+}
+
+.zan_img {
+    position: relative;
+    bottom:2rpx;
+    right: 26rpx;
     width:46rpx;
     height:46rpx;
+}
+
+.zan_num {
+    position: relative;
+    right:20rpx;
+    bottom:8rpx;
+    font-size:32rpx;
 }
 	
 .comment {
