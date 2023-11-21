@@ -1,4 +1,4 @@
-<!--pages/recommend/recommend.wxml-->
+<!--pages/my_card/my_card.wxml-->
 
 <view class="coat">
     <!-- 导航区 -->
@@ -12,52 +12,47 @@
             <view bindtap="activeNav" data-index="{{2}}" class="nav_item {{2===currentIndexNav?'active':''}}">我的帖子</view>
     </scroll-view>
     </view>
-    <!-- 浏览区 -->
+    <!-- 我的帖子浏览区 -->
     <scroll-view scroll-y class="scan">
         <!-- 帖子外观 -->
-        <view class="post" wx:for="{{post_list}}" wx:key="index" wx:for-item="Pitem">
-            <!-- 版块-用户 :头像，昵称，发帖时间;点击进入个人主页 -->
-            <view class="user">
-                <image bindtap="click_home" data-my_user="{{Pitem.my_user}}" class="head" src="{{Pitem.my_user.user.head}}" />
-                <view bindtap="click_home" data-my_user="{{Pitem.my_user}}" class="name">{{Pitem.my_user.user.myname}}</view>
-                <view class="time">{{Pitem.post.time}}</view>
-            </view>
+        <view class="post" wx:for="{{my_user.post}}" wx:key="index" >
+            <view class="time">{{item.time}}</view>
             <!-- 版块-内容 :标题，简介;点击进入帖子详情 -->
-            <view bindtap="click_detail" data-item="{{Pitem}}" class="content">
+            <view bindtap="click_detail" data-detail="{{item}}" class="content">
                 <!-- 内容-标题 -->
-                <text class="title">{{Pitem.post.title}}
+                <text class="title">{{item.title}}
                 </text>
-                <!-- 内容-简介 :显示帖子部分内容，限制为两行 -->
-                <text class="intro">{{Pitem.post.content}}
+                <!-- 内容-简介 :显示帖子部分内容，限制为三行 -->
+                <text class="intro">{{item.content}}
                 </text>
             </view>
             <!-- 版块-操作 :点赞、评论;点击进行相应的操作 -->
             <view class="opera">
                 <!-- 操作-点赞:点击进行点赞 -->
                 <view class="zan">
-                  <image bindtap="zan" data-index="{{index}}" class="zan_img" src="{{Pitem.post.zan.img}}" />
-                  <text class="zan_num">{{Pitem.post.zan.num}}</text>
+                  <image bindtap="zan" data-index="{{index}}" class="zan_img" src="{{item.zan.img}}" />
+                  <text class="zan_num">{{item.zan.num}}</text>
                 </view>
-                
                 <!-- 操作-评论:点击进行评论 -->
-                <image bindtap="comment" data-item="{{Pitem}}"  class="comment" src="../../icons/评论.png" />
+                <image bindtap="comment" data-detail="{{item}}" class="comment" src="/icons/评论.png" />
             </view>
         </view>
+
     </scroll-view>       
     <!-- 底部导航区 -->
     <view class="bottom_nav">
         <!-- 首页 -->
         <view bindtap="skip" data-id="0" class="bt_item_1">
-            <image class="icon" src="../../icons/首页.png" /> 
+            <image class="icon" src="/icons/首页.png" /> 
             <text >首页</text>
         </view>
         <!-- 发帖 -->
         <view bindtap="skip" data-id="1" class="bt_item_up">
-            <image class="icon_up" src="../../icons/加号.png" /> 
+            <image class="icon_up" src="/icons/加号.png" /> 
         </view>
         <!-- 我的 -->
         <view bindtap="skip" data-id="2" class="bt_item_2">
-            <image class="icon" src="../../icons/我的.png" /> 
+            <image class="icon" src="/icons/我的.png" /> 
             <text >我的</text>
         </view>
     </view>

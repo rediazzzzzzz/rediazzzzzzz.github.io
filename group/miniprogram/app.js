@@ -79,13 +79,18 @@ App({
               {
                 head:"/images/帽子.jpg",
                 name:"帽帽",
-                content:"吐司里面怎么长猫了这有问题呀快寄过来我看看",
+                content:"吐司里面怎么长猫了这有问题啊快寄过来我看看",
                 time:"2023/11/20 20：49",
               },
             ],
           },
         ]
       },
+      timing:""
     };
+  },
+  ask_time()  //求当前时间，形式为 xxxx/xx/xx xx:xx
+  {
+    return new Date().toLocaleDateString() + ' ' + new Date().toTimeString().substring(0,5)
   }
 });

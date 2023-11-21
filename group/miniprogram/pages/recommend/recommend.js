@@ -1,5 +1,5 @@
 // pages/recommend/recommend.js
-
+const app = getApp();
 Page({
 
   /**
@@ -21,7 +21,7 @@ Page({
           },
           post:[
             {
-              time:"17:25",
+              time:"2023/11/06 17:25",
               title:"大四二手出售：这次体验超棒",
               content:"这次从学姐手里买的便利贴，简直开阔了我的眼界",
               img:[
@@ -37,15 +37,15 @@ Page({
               },
               cmt:[
                 {
-                  head:"/images/松鼠.jpg",
-                  name:"吗喽",
+                  head:"/images/橘子.jpg",
+                  name:"橘子",
                   content:"点赞",
                   time:"2023/11/14 13:24",
                 }
               ],
             },
             {
-              time:"19:55",
+              time:"2023/11/06 19:55",
               title:"大四二手出售：这次体验超棒",
               content:"这次从学姐手里买的空气，简直开阔了我的眼界",
               img:[
@@ -59,62 +59,18 @@ Page({
               },
               cmt:[
                 {
-                  head:"/images/松鼠.jpg",
-                  name:"吗喽",
+                  head:"/images/橘子.jpg",
+                  name:"橘子",
                   content:"不错不错",
                   time:"2023/11/20 13:24",
                 }
               ],
             },
-            {
-              time:"20:55",
-              title:"大四二手出售：这次体验超棒",
-              content:"这次从学姐手里买的空气，简直开阔了我的眼界",
-              img:[
-                "/images/zhu.jpg",
-              ],
-              tag:["空气"],
-              zan:{
-                num:0,
-                flag:false,
-                img:"/icons/zan0.png",
-              },
-              cmt:[
-                {
-                  head:"/images/松鼠.jpg",
-                  name:"吗喽",
-                  content:"不错不错",
-                  time:"2023/11/20 13:24",
-                }
-              ],
-            },
-            {
-              time:"20:55",
-              title:"大四二手出售：这次体验超棒",
-              content:"这次从学姐手里买的空气，简直开阔了我的眼界",
-              img:[
-                "/images/zhu.jpg",
-              ],
-              tag:["空气"],
-              zan:{
-                num:0,
-                flag:false,
-                img:"/icons/zan0.png",
-              },
-              cmt:[
-                {
-                  head:"/images/松鼠.jpg",
-                  name:"吗喽",
-                  content:"不错不错",
-                  time:"2023/11/20 13:24",
-                }
-              ],
-            }
           ]
           
         },
         post:{
-          time:"17:25",
+          time:"2023/11/06 17:25",
           title:"大四二手出售：这次体验超棒",
           content:"这次从学姐手里买的便利贴，简直开阔了我的眼界",
           img:[
@@ -130,8 +86,8 @@ Page({
           },
           cmt:[
             {
-              head:"/images/松鼠.jpg",
-              name:"吗喽",
+              head:"/images/橘子.jpg",
+              name:"橘子",
               content:"点赞",
               time:"2023/11/14 13:24",
             }
@@ -148,7 +104,7 @@ Page({
           },
           post:[
             {
-              time:"17:27",
+              time:"2023/11/06 17:27",
               title:"大四二手出售：这次体验超棒",
               content:"这次从学姐手里买的糖果，简直开阔了我的眼界",
               img:[
@@ -179,7 +135,7 @@ Page({
           ]
         },
         post:{
-          time:"17:27",
+          time:"2023/11/06 17:27",
           title:"大四二手出售：这次体验超棒",
           content:"这次从学姐手里买的糖果，简直开阔了我的眼界",
           img:[
@@ -218,7 +174,7 @@ Page({
           },
           post:[
             {
-              time:"17:28",
+              time:"2023/11/06 17:28",
               title:"大四二手出售：这次体验超棒",
               content:"这次从学姐手里买的帽子，简直开阔了我的眼界",
               img:[
@@ -235,7 +191,7 @@ Page({
           ]
         },
         post:{
-          time:"17:28",
+          time:"2023/11/07 17:28",
           title:"大四二手出售：这次体验超棒",
           content:"这次从学姐手里买的帽子，简直开阔了我的眼界",
           img:[
@@ -260,7 +216,7 @@ Page({
           },
           post:[
             {
-              time:"17:29",
+              time:"2023/11/08 17:29",
               title:"大四二手出售：这次体验超棒",
               content:"这次从学姐手里买的橘子，简直开阔了我的眼界",
               tag:["4","tuk","鹅鹅鹅","1111111111"],
@@ -275,7 +231,7 @@ Page({
         },
         
         post:{
-          time:"17:29",
+          time:"2023/11/08 17:29",
           title:"大四二手出售：这次体验超棒",
           content:"这次从学姐手里买的橘子，简直开阔了我的眼界",
           tag:["4","tuk","鹅鹅鹅","1111111111"],
@@ -305,11 +261,11 @@ Page({
     console.log(e.target.dataset.index)
     if(this.data.currentIndexNav==1)        //搜索
     wx.redirectTo({
-      url: '/pages/search/search',
+      url: '/pages/packages_c/pages/search/search',
     })
     else if(this.data.currentIndexNav==2)   //我的帖子
     wx.redirectTo({
-      url: '/pages/my_card/my_card',
+      url: '/pages/packages_c/pages/my_card/my_card',
     })
   },
 
@@ -323,7 +279,7 @@ Page({
     console.log("点击发帖人个人主页")
     console.log(U)
     wx.navigateTo({
-      url:'/pages/home/home?my_user='+ JSON.stringify(U),
+      url:'/pages/packages_c/pages/home/home?my_user='+ JSON.stringify(U),
     })
   },
 
@@ -336,7 +292,7 @@ Page({
     console.log("传递数据：\n")
     console.log(I)
     wx.navigateTo({
-      url:'/pages/detail/detail?user='+JSON.stringify(I.my_user.user)+'&post='+JSON.stringify(I.post),
+      url:'/pages/packages_c/pages/detail/detail?user='+JSON.stringify(I.my_user.user)+'&post='+JSON.stringify(I.post),
     })
   },
 
@@ -376,7 +332,8 @@ Page({
   //评论
   comment(e)
   {
-    console.log("评论");
+    console.log("点击外评论");
+    this.click_detail(e);
   },
 
 //分区3-底部导航
@@ -414,13 +371,12 @@ Page({
   //获取帖子信息
   get_scan_list()
   {
-    
+    //向后端发送请求获取帖子
   },
 
   onLoad:function(options){
     //获取帖子数据
     this.get_scan_list();
-    const app = getApp();
     //console.log(app.globalData.my_user.user)
     this.setData({
       my_user:app.globalData.my_user
