@@ -4,6 +4,7 @@
     "pages/recommend/recommend"
     
   ],
+  
   "subpackages": [
     {
       "root": "pages/packages_c",

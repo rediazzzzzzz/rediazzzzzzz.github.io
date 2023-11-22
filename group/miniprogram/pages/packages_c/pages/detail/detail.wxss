@@ -112,7 +112,6 @@ page {
     margin-top:10rpx;
     width:690rpx;
     box-sizing: border-box;
-    
     white-space:nowrap;
 }
 
@@ -128,6 +127,11 @@ page {
     
     display:inline-block;
     background:white;
+}
+
+.click_tag {
+  background:gray;
+  color: white;
 }
 
 /*帖子行为*/

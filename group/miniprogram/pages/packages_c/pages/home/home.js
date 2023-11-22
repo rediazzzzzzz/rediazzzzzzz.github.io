@@ -34,7 +34,7 @@ Page({
   {
     console.log("点击帖子详情")
     wx.navigateTo({
-      url:'/pages/detail/detail?user='+JSON.stringify(this.data.my_user.user)+'&post='+JSON.stringify(e.currentTarget.dataset.detail),
+      url:'/pages/packages_c/pages/detail/detail?user='+JSON.stringify(this.data.my_user)+'&post='+JSON.stringify(e.currentTarget.dataset.detail),
     })
   },
 

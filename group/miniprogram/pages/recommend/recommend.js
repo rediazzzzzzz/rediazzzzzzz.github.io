@@ -292,7 +292,7 @@ Page({
     console.log("传递数据：\n")
     console.log(I)
     wx.navigateTo({
-      url:'/pages/packages_c/pages/detail/detail?user='+JSON.stringify(I.my_user.user)+'&post='+JSON.stringify(I.post),
+      url:'/pages/packages_c/pages/detail/detail?user='+JSON.stringify(I.my_user)+'&post='+JSON.stringify(I.post),
     })
   },
 
@@ -349,21 +349,21 @@ Page({
     {
       console.log("点击首页")
       wx.redirectTo({
-        url: '/pages/index/index',
+        url: '',
       })
     }
     if(e.currentTarget.dataset.id==1)
     {
       console.log("点击发帖")
       wx.navigateTo({
-        url: '/pages/upload/upload',
+        url: '/pages/packages_c/pages/upload/upload',
       })
     }
     if(e.currentTarget.dataset.id==2)
     {
       console.log("点击我的")
       wx.redirectTo({
-        url: '/pages/my/my',
+        url: '',
       })
     }
   },

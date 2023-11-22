@@ -22,16 +22,26 @@
             <!-- 内容 -->
             <view class="post_item">
                 <text class="tip">内容：</text>
-                <input class="item2" maxlength="500" type="text" name="post_content" confirm-type="next" placeholder="少于500字"/>
+                <input class="item1" maxlength="500" type="text" name="post_content" confirm-type="next" placeholder="少于500字"/>
             </view>
             <!-- 图片 -->
-            <view class="post_item">
+            <view class="post_item_img">
                 <text class="tip">图片：\n</text>
-                <view class="cube_img"></view>
-                <view class="cube_img"></view>
+                <view class="cube_add">
+                    <image bindtap="add_img" style="height: 100rpx;width: 100rpx;margin-top:120rpx;margin-left:80rpx" src="/icons/加号2.png" />
+                </view>
+                <scroll-view  scroll-x="{{true}}" class="for_img" >
+                  
+                  <image wx:for="{{Pimg}}" wx:key="index" class="cube_img" src="{{item}}" />
+                </scroll-view>
+            </view>
+            <!-- tag -->
+            <view class="post_item">
+              <text class="tip_tag">添加话题：</text>
+              <input class="item2" type="text" name="post_tag" confirm-type="done" />
             </view>
             <!-- 发布 -->
-            <button form-type="submit" hover-class="hover" class="release" style="width:200rpx;height:90rpx;">发布</button>
+            <button form-type="submit" hover-class="hover" class="release" style="width:200rpx;height:90rpx;" >发布</button>
         </form>
     </view>
 </view>

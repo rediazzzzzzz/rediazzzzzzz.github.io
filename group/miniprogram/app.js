@@ -17,22 +17,22 @@ App({
     this.globalData = {
       my_user:{
         user:{
-          head:"/images/橘子.jpg",
-          myname:"tuk",
+          head:"/images/流汗.jpg",
+          myname:"盲点好",
           mycredit:100,
         },
         search_history:["梳子","橘子","卷子"],
         post:[
           {
-            time:"2023/11/14 13:58",
-            title:"大四二手出售：这次体验超棒",
-            content:"这次从学姐手里买的橘子，简直开阔了我的眼界",
+            time:"2023/11/22 12:03",
+            title:"开罗全新游戏即将发售",
+            content:"和哆啦A梦联动！！！！！谁买了借我玩凸(>皿<)凸~~~~~~",
             img:[
-              "/images/橘子.jpg",
-              "/images/tuk.jpg",
-              "/images/gou.jpg",
+              "/images/game2.jpg",
+              "/images/k1.jpg",
+              "/images/k2.jpg",
             ],
-            tag:["橘子","眼界"],
+            tag:["开罗游戏","kairosoft"],
             zan:{
               num:120,
               flag:false,
@@ -43,7 +43,7 @@ App({
                 head:"/images/糖果.jpg",
                 name:"糖糖堂",
                 content:"不错不错",
-                time:"2023/11/14 15：19",
+                time:"2023/11/22 12：06",
               },
             ],
           },
@@ -68,7 +68,7 @@ App({
                 head:"/images/mao.jpg",
                 name:"我是猫",
                 content:"这吐司不是我刚生的吗快还给我~",
-                time:"2023/11/20 20：24",
+                time:"2023/11/20 20：34",
               },
               {
                 head:"/images/石矶.jpg",
@@ -79,7 +79,7 @@ App({
               {
                 head:"/images/帽子.jpg",
                 name:"帽帽",
-                content:"吐司里面怎么长猫了这有问题啊快寄过来我看看",
+                content:"猫猫说她想来35号楼",
                 time:"2023/11/20 20：49",
               },
             ],
@@ -89,7 +89,7 @@ App({
       timing:""
     };
   },
-  ask_time()  //求当前时间，形式为 xxxx/xx/xx xx:xx
+  ask_time()  //求当前时间，形式为 系统的时间显示形式，如xxxx/xx/xx xx:xx
   {
     return new Date().toLocaleDateString() + ' ' + new Date().toTimeString().substring(0,5)
   }
