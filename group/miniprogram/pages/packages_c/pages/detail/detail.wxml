@@ -1,10 +1,12 @@
 <!--pages/detail/detail.wxml-->
 
 <view class="coat">
-    <!-- 抬头 -->
-    <view class="back">
-    <text class="title">精彩有趣</text>
-    </view>
+    <!-- 抬头，现已不用 -->
+    <!-- 
+      <view class="back">
+      <text class="title">精彩有趣</text>
+      </view>
+     -->
     <!-- 用户信息 -->
     <view class="user">
         <image class="head" bindtap="click_home" data-user="{{user}}" src="{{user.user.head}}" />

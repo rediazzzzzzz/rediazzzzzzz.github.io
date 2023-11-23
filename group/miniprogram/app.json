@@ -4,7 +4,8 @@
     "pages/recommend/recommend"
     
   ],
-  
+  "entryPagePath": "pages/packages_c/pages/detail/detail",
+
   "subpackages": [
     {
       "root": "pages/packages_c",

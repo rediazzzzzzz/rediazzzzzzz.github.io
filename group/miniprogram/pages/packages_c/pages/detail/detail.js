@@ -7,9 +7,12 @@ Page({
    */
   data: {
     user:{
-          head:"/images/mao.jpg",
-          myname:"我是猫",
-          mycredit:888,
+      user:{
+        head:"/images/mao.jpg",
+        myname:"我是猫",
+        mycredit:888,
+      }
+          
     },
     my_post:{
       time:"22:17",
@@ -168,12 +171,14 @@ Page({
     
     var that = this;
     console.log(options)
+    if(options==1)
+    {
     that.setData({
       user:JSON.parse(options.user),
       my_post:JSON.parse(options.post),
       my_user:app.globalData.my_user
     })
-
+}
     console.log("detail receive options:\n")
     console.log("get user:\n")
     console.log(that.data.user)
