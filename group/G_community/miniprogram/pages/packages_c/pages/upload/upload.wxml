@@ -30,7 +30,7 @@
                 <view class="cube_add">
                     <image bindtap="add_img" style="height: 100rpx;width: 100rpx;margin-top:120rpx;margin-left:80rpx" src="/icons/加号2.png" />
                 </view>
-                <scroll-view  scroll-x="{{true}}" class="for_img" >
+                <scroll-view  scroll-x="{{true}}" class="for_img" enhanced:show-scrollbar="false" >
                   
                   <image wx:for="{{Pimg}}" wx:key="index" class="cube_img" src="{{item}}" />
                 </scroll-view>

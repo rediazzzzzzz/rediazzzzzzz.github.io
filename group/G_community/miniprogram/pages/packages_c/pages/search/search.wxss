@@ -101,7 +101,7 @@ page {
     position:absolute;
     top:250rpx;
     left:70rpx;
-    height:140rpx;
+    height:100rpx;
     width: 670rpx;
     white-space:nowrap;
 }
@@ -120,14 +120,14 @@ page {
 
 .post {
   position:absolute;
-  top:390rpx;
+  top:370rpx;
   width: 100%;
   height: 650rpx;
 }
 
 .post_item {
     position:relative;
-    margin-bottom:80rpx;
+    margin-bottom:60rpx;
     width:670rpx;
     height:408rpx;
     background:white;
