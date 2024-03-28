@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/shape"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-45dp"
+        android:src="@drawable/p" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/shape"
+        android:layout_marginTop="-200dp"
+        android:background="@drawable/round_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textSize="24sp"
+            android:textColor="#F2D56C"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="70sp"
+            android:layout_marginTop="10dp"
+            android:text="账号"
+            android:textColor="#6877CA"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/acc1"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_gravity="start"
+            android:layout_marginStart="40sp"
+            android:layout_marginTop="-24dp"
+            android:src="@drawable/account1" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40sp"
+            android:layout_marginEnd="40sp"
+            android:layout_gravity="start"
+            android:hint="请输入账号"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:textColor="#BDBCC2"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/key2"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="40sp"
+            android:src="@drawable/key1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="70sp"
+            android:layout_marginTop="-24dp"
+            android:text="密码"
+            android:textColor="#6877CA"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40sp"
+            android:layout_marginEnd="40sp"
+            android:layout_gravity="start"
+            android:hint="请输入密码"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:textColor="#BDBCC2"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/key1"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="40sp"
+            android:src="@drawable/key2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="70sp"
+            android:layout_marginTop="-24dp"
+            android:text="密码"
+            android:textColor="#6877CA"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40sp"
+            android:layout_marginEnd="40sp"
+            android:layout_gravity="start"
+            android:hint="请输入密码"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:textColor="#BDBCC2"
+            android:padding="8dp" />
+
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="-10dp"
+            android:text="登录"
+            android:background="@android:color/transparent"
+            android:textColor="#F2D56C"/>
+
+
+        <Button
+            android:id="@+id/button2_finish"
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="注   册"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
