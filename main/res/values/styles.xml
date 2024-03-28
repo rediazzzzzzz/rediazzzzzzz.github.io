@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="CustomRatingBarStyle" parent="@android:style/Widget.Holo.RatingBar">
-        <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
-        <item name="android:minHeight">50dp</item>
-    </style>
-
-</resources>
